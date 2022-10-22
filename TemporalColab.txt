@@ -1,0 +1,17 @@
+create table dbo.Colaborador(
+[IdColaborador] int NOT NULL PRIMARY KEY CLUSTERED   
+  , [PNC] nvarchar(15) NOT NULL  
+  , [SNC] nvarchar(15)    
+  , [PAC] nvarchar(15) NOT NULL  
+  , [SAC] nvarchar(15)
+  , [Id_Mun] int  NOT NULL 
+  , [DirC] nvarchar(15) NOT NULL  
+  , [TelC] char(8) NOT NULL  
+  , [Email] varchar(50) NOT NULL  
+  , [EstadoC] bit NOT NULL  
+  , [ValidFrom] datetime2 (2) GENERATED ALWAYS AS ROW START  
+  , [ValidTo] datetime2 (2) GENERATED ALWAYS AS ROW END  
+  , PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo)  
+
+)
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ColaboradorHistory));
