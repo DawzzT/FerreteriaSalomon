@@ -20,7 +20,7 @@ sp_adduser 'Armando','Colaborador'
 sp_addrolemember 'db_datareader','Colaborador'
 sp_addrolemember 'db_datawriter','Colaborador'
 
-deny create table, create view, create procedure to
+block create table
 Colaborador
 
 -- Cuenta de L/E
@@ -33,4 +33,10 @@ sp_addrolemember 'db_datawriter','Colaborador2'
 deny create table, create view, create procedure to
 Colaborador2
 
+create procedure BloquearCredenciales
+as
+begin tran
+set lock_timeout 1800
+commit
 
+backup database FerreteriaSalomon to disk='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\FerreteriaSalomon.bak'
