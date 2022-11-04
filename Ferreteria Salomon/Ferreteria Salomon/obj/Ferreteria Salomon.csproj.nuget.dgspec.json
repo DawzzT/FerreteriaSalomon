@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dawzz\\Downloads\\TareaCurso-BD-I-main\\Ferreteria Salomon\\Ferreteria Salomon\\Ferreteria Salomon.csproj": {}
+    "C:\\Users\\Dawzz\\Source\\Repos\\TareaCurso-BD-I\\Ferreteria Salomon\\Ferreteria Salomon\\Ferreteria Salomon.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dawzz\\Downloads\\TareaCurso-BD-I-main\\Ferreteria Salomon\\Ferreteria Salomon\\Ferreteria Salomon.csproj": {
+    "C:\\Users\\Dawzz\\Source\\Repos\\TareaCurso-BD-I\\Ferreteria Salomon\\Ferreteria Salomon\\Ferreteria Salomon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dawzz\\Downloads\\TareaCurso-BD-I-main\\Ferreteria Salomon\\Ferreteria Salomon\\Ferreteria Salomon.csproj",
+        "projectUniqueName": "C:\\Users\\Dawzz\\Source\\Repos\\TareaCurso-BD-I\\Ferreteria Salomon\\Ferreteria Salomon\\Ferreteria Salomon.csproj",
         "projectName": "Ferreteria Salomon",
-        "projectPath": "C:\\Users\\Dawzz\\Downloads\\TareaCurso-BD-I-main\\Ferreteria Salomon\\Ferreteria Salomon\\Ferreteria Salomon.csproj",
+        "projectPath": "C:\\Users\\Dawzz\\Source\\Repos\\TareaCurso-BD-I\\Ferreteria Salomon\\Ferreteria Salomon\\Ferreteria Salomon.csproj",
         "packagesPath": "C:\\Users\\Dawzz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dawzz\\Downloads\\TareaCurso-BD-I-main\\Ferreteria Salomon\\Ferreteria Salomon\\obj\\",
+        "outputPath": "C:\\Users\\Dawzz\\Source\\Repos\\TareaCurso-BD-I\\Ferreteria Salomon\\Ferreteria Salomon\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

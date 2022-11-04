@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jat8lT3TKqsecm2BxgoyuTTA9UIfFtpj3zJKSNUAJ/jaJXzPqY/ZHm4gpVsweoub4AQtAeo0MiFrGIbmmtP7gA==",
+  "dgSpecHash": "ozvbl4BzQg2jTFDKLfK/t5kNzaaS62eiVKk7ja7AUdeMkZTeUg3+Gz+AKPKZXcSxMULJiNtcaRhCF/3KvFEarQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dawzz\\Downloads\\TareaCurso-BD-I-main\\Ferreteria Salomon\\Ferreteria Salomon\\Ferreteria Salomon.csproj",
+  "projectFilePath": "C:\\Users\\Dawzz\\Source\\Repos\\TareaCurso-BD-I\\Ferreteria Salomon\\Ferreteria Salomon\\Ferreteria Salomon.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dawzz\\.nuget\\packages\\altocontrols\\1.0.1\\altocontrols.1.0.1.nupkg.sha512",
     "C:\\Users\\Dawzz\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
