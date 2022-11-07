@@ -41,8 +41,11 @@ ComisionVentas float
 )
 
 create table Proveedor(
-Id_Prov char(5) primary key not null,
-NombreProv nvarchar(35) not null,
+Id_Prov int primary key identity(1,1) not null,
+PNP nvarchar(15) not null,
+SNP nvarchar(15),
+PAP nvarchar(15) not null,
+SAP nvarchar(15) not null,
 DirProv nvarchar(70) not null,
 TelP char(8) check(TelP like '[2|5|7|8][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
 Email nvarchar(50),
@@ -57,7 +60,7 @@ DescProd nvarchar(50) not null,
 PrecioP float not null,
 ExistP int not null,
 EstadoProd bit default 1 not null,
-Id_Prov char(5) foreign key references Proveedor(Id_Prov) not null
+Id_Prov int foreign key references Proveedor(Id_Prov) not null
 )
 
 create table Ventas(
@@ -80,7 +83,7 @@ Id_Dev int primary key identity(1,1) not null,
 Fecha_Dev datetime default getdate() NOT NULL,
 Id_Cliente int foreign key references Clientes(Id_Cliente) not null,
 Id_Venta int foreign key references Ventas(Id_Venta) not null,
-TotalDevPedidos float 
+TotalDevVentas float 
 )
 
 create table Det_DevVentas(
@@ -89,4 +92,36 @@ CodProd char(5) foreign key references Productos(CodProd) not null,
 cantdev int not null,
 subtdev float
 primary key(Id_Dev,CodProd)
+)
+
+create table Compras(
+Id_Compra int primary key identity(1,1) not null,
+FechaC datetime not null,
+Id_Prov int foreign key references Proveedor(Id_Prov) not null,
+TotalC float
+)
+
+Create table Det_Compras(
+Id_Compra int foreign key references Compras(Id_Compra) not null,
+CodProd char(5) foreign key references Productos(CodProd) not null,
+cantc int not null,
+precioc float not null,
+subtc float,
+primary key(Id_Compra,CodProd)
+)
+
+create table Dev_Compra(
+Id_DevC int primary key identity(1,1) not null,
+FechaDev datetime default getdate() NOT NULL,
+Id_Prov int foreign key references Proveedor(Id_Prov) not null,
+Id_Compra int foreign key references Compras(Id_Compra) not null,
+TotalDevCompras float
+)
+
+create table Det_DevC(
+Id_DevC int foreign key references Dev_Compra(Id_DevC) not null,
+CodProd char(5) foreign key references Productos(CodProd) not null,
+cantdevC int not null,
+subtdevC float
+primary key(Id_DevC,CodProd)
 )
