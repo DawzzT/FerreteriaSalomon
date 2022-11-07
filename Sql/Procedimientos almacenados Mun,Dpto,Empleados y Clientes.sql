@@ -272,7 +272,7 @@ begin
 end
 
 --Actualizacion
-create procedure ActColab
+alter procedure ActColab
 @IDC int,
 @IDM int,
 @TC char(8),
@@ -296,9 +296,9 @@ begin
 	begin
 	 if(@ec=1)
 	 begin
-	  update Colaborador set @DC=@DC where Id_Colab=@IDC
-	  update Colaborador set @TC=@TC where Id_Colab=@IDC
-	  update Colaborador set @EmailC=@EmailC where Id_Colab=@IDC
+	  update Colaborador set DirC=@DC where Id_Colab=@IDC
+	  update Colaborador set TelC=@TC where Id_Colab=@IDC
+	  update Colaborador set EmailC=@EmailC where Id_Colab=@IDC
 	 end
 	 else
 	 begin
