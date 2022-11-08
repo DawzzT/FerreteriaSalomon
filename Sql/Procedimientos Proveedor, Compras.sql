@@ -1,5 +1,6 @@
 --Procedimientos para Proveedor
 
+use FerreteriaSalomon
 --Incersion
 create procedure NProv
 @PNP nvarchar(15),
@@ -251,3 +252,155 @@ begin
   from Productos where CodProd=@COP
   return @stc
 end
+
+--Procedimientos para Dev_Compras
+--Insercion
+create procedure NDev_Compras
+@IDP int,
+@IDC int
+as
+declare @idprov as int
+set @idprov = (select Id_Prov from Proveedor where Id_Prov=@IDP)
+declare @idcompra as int
+set @idcompra = (select Id_Compra from Compras where Id_Compra=@IDC)
+if(@idprov=@IDP)
+begin
+ if(@idcompra=@IDC)
+ begin
+  insert into Dev_Compra values(getdate(),@IDP,@IDC,0)
+ end
+ else
+ begin
+  print 'Compra no registrada'
+ end
+end 
+else
+begin
+ print 'Proveedor no registrado'
+end
+
+
+--Busqueda
+create procedure BuscarDevCompra
+@IDDevC int
+as
+declare @iddevComp as int
+set @iddevC=(select Id_DevC from Dev_Compra where Id_DevC=@IDDevC)
+if(@iddevComp=@IDDevC)
+begin
+	select * from Dev_Compra where Id_DevC=@IDDevC
+end
+else
+begin
+  print 'Devolucion no encontrada'
+end
+
+-- Lista
+create procedure ListarDevC
+as
+select * from Dev_Compra
+
+--Procedimiento de Det_DevVentas
+--Funcion para calcular subtotal de dev_ventas y trigger para actualizar inventario
+create function CSTDevC(@COP int,@cd as int)
+returns float
+as
+begin
+  declare @stc as float
+  select @stc=PrecioP * @cd
+  from Productos where CodProd=@COP
+  return @stc
+end
+
+create trigger ActINV
+on
+Det_DevC
+after insert
+as
+  update Productos set ExistP=ExistP-(select
+  ExistP from inserted) from Productos p,
+ Det_DevC dc where p.CodProd= dc.CodProd
+
+ --Procedimientos para Detalles de DevCompras
+--Incersion
+create procedure NDetDevC
+@IDC int,
+@COP char(5),
+@cd int
+as
+declare @iddevC int
+set @iddevC=(select Id_DevC from Dev_Compra where Id_DevC=@IDC)
+declare @codprod as char(5)
+set @codprod=(select CodProd from Productos where CodProd=@COP)
+declare @idcompra int
+set @idcompra=(select Id_Compra from Dev_Compra where Id_Compra=@IDC)
+declare @cantcomp as int
+set @cantcomp=(select cantc from Det_Compras where Id_Compra=@idcompra)
+if(@iddevC=@IDC)
+begin
+  if(@COP = '')
+  begin
+    print 'No puede ser nulo'
+  end
+  else
+  begin
+    if(@COP=@codprod)
+	begin
+	  if(@cd<=@cantcomp)
+	  begin
+	    insert into Det_DevC values(@IDC,@COP,@cd,dbo.CSTDevC(@COP,@cd))
+	  end
+	  else
+	  begin
+	    print 'Inventario insuficiente'
+	  end
+	end
+	else
+	begin
+	  print 'Producto no registrado'
+	end
+  end
+end
+else
+begin
+  print 'Compra o Devolucion no registrada'
+end
+
+--Busqueda
+create procedure BuscarDetDevC
+@IDC int
+as
+declare @iddevC as int
+set @iddevC=(select Id_DevC from Dev_Compra where Id_DevC=@IDC)
+if(@iddevC=@IDC)
+begin
+	select * from Det_DevC where Id_DevC=@IDC
+end
+else
+begin
+  print 'Devolucion no encontrada'
+end
+
+-- Lista
+create procedure ListarDetDevC
+as
+select * from Det_DevC
+
+--Actualizacion
+create procedure ActDevC
+@IDC int
+as
+declare @iddevC as int
+set @iddevC=(select Id_DevC from Dev_Compra where Id_DevC=@IDC)
+declare @std as float
+set @std=(select sum(subtdevC) from Det_DevC where Id_DevC=@IDC)
+if(@IDC=@iddevC)
+begin
+  update Dev_Compra set TotalDevCompras=@std where Id_DevC=@IDC
+end
+else
+begin
+ print 'Devolucion no encontrada'
+end
+
+backup database FerreteriaSalomon to disk='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\FerreteriaSalomon.bak'

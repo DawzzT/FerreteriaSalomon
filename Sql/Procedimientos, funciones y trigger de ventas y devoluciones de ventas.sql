@@ -271,23 +271,6 @@ begin
  print 'Cliente no registrado'
 end
 
---Actualizacion
-alter procedure ActDevVentas
-@IDDevV int
-as
-declare @iddevVentas as int
-set @iddevVentas=(select Id_Dev from Dev_Ventas where Id_Dev=@IDDevV)
-declare @stp as float
-set @stp=(select sum(subtdev) from Det_DevVentas where Id_Dev=@IDDevV)
-if(@iddevVentas=@IDDevV)
-begin
-  update Dev_Ventas set TotalDevPedidos=@stp where
-  Id_Dev=@IDDevV
-end
-else
-begin
-  print 'Devolucion no registrada'
-end
 
 --Busqueda
 create procedure BuscarDevVenta
@@ -311,12 +294,12 @@ select * from Dev_Ventas
 
 --Procedimiento de Det_DevVentas
 --Funcion para calcular subtotal de dev_ventas y trigger para actualizar inventario
-create function CSTDevV(@COP int,@cv as int)
+create function CSTDevV(@COP int,@cd as int)
 returns float
 as
 begin
   declare @stv as float
-  select @stv=PrecioP * @cv
+  select @stv=PrecioP * @cd
   from Productos where CodProd=@COP
   return @stv
 end
@@ -330,36 +313,38 @@ as
   ExistP from inserted) from Productos p,
  Det_DevVentas dv where p.CodProd= dv.CodProd
 
+ --Procedimientos para Detalles de DevVentas
 --Incersion
-create procedure NDV
-@IDV int,
+create procedure NDetDevVentas
+@IDD int,
 @COP char(5),
-@cv int
+@cd int
 as
-declare @idventa as int
-set @idventa=(select Id_Venta from Ventas where Id_Venta=@IDV)
-declare @codProd as char(5)
-set @codProd=(select CodProd from Productos where CodProd=@COP)
-declare @exi as int
-set @exi=(select ExistP from Productos where CodProd=@COP)
-if(@idventa=@IDV)
+declare @iddev int
+set @iddev=(select Id_Dev from Dev_Ventas where Id_Dev=@IDD)
+declare @codprod as char(5)
+set @codprod=(select CodProd from Productos where CodProd=@COP)
+declare @idventa int
+set @idventa=(select Id_Venta from Dev_Ventas where Id_Dev=@IDD)
+declare @cantven as int
+set @cantven=(select cantv from Det_Ventas where Id_Venta=@idventa)
+if(@iddev=@IDD)
 begin
-  if(@COP='')
+  if(@COP = '')
   begin
     print 'No puede ser nulo'
   end
   else
   begin
-    if(@COP=@codProd)
+    if(@COP=@codprod)
 	begin
-	  if(@cv<=@exi)
+	  if(@cd<=@cantven)
 	  begin
-	    insert into Det_Ventas values(
-		@IDV,@COP,@cv,dbo.CSTV(@COP,@cv))
+	    insert into Det_DevVentas values(@IDD,@COP,@cd,dbo.CSTDevV(@COP,@cd))
 	  end
 	  else
 	  begin
-	    print 'Inventario insufiente'
+	    print 'Inventario insuficiente'
 	  end
 	end
 	else
@@ -370,28 +355,45 @@ begin
 end
 else
 begin
-  print 'Venta no registrada'
+  print 'Venta o Devolucion no registrada'
 end
 
 --Busqueda
-create procedure BuscarDetVentas
-@IDV int
+create procedure BuscarDetDevVentas
+@IDD int
 as
-declare @idventa as int
-set @idventa=(select Id_Venta from Ventas where Id_Venta=@IDV)
-if(@idventa=@IDV)
+declare @iddevV as int
+set @iddevV=(select Id_Dev from Dev_Ventas where Id_Dev=@IDD)
+if(@iddevV=@IDD)
 begin
-	select * from Det_Ventas where Id_Venta=@IDV
+	select * from Det_DevVentas where Id_Dev=@IDD
 end
 else
 begin
-  print 'Venta no encontrada'
+  print 'Devolucion no encontrada'
 end
 
 -- Lista
-create procedure ListarDetV
+create procedure ListarDetDevV
 as
-select * from Det_Ventas
+select * from Det_DevVentas
+
+--Actualizacion
+create procedure ActDevVentas
+@IDD int
+as
+declare @iddev as int
+set @iddev=(select Id_Dev from Dev_Ventas where Id_Dev=@IDD)
+declare @std as float
+set @std=(select sum(subtdev) from Det_DevVentas where Id_Dev=@IDD)
+if(@IDD=@iddev)
+begin
+  update Dev_Ventas set TotalDevVentas=@std where Id_Dev=@IDD
+end
+else
+begin
+ print 'Devolucion no encontrada'
+end
 
 
 
