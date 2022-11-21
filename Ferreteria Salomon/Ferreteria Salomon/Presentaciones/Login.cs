@@ -1,9 +1,11 @@
 
 using AltoControls;
+using Ferreteria_Salomon.Presentaciones;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Security.Cryptography;
+using System.Runtime.InteropServices;
 
 namespace Ferreteria_Salomon
 {
@@ -17,6 +19,14 @@ namespace Ferreteria_Salomon
         {
             InitializeComponent();
         }
+
+        //Mover formulario
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int Msg, int wParam, int lParam);
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -44,7 +54,7 @@ namespace Ferreteria_Salomon
             if(txtUsuario.Text == "Usuario")
             {
                 txtUsuario.Text = String.Empty;
-                txtUsuario.ForeColor = Color.LightGray;
+                txtUsuario.ForeColor = Color.Black;
             }
         }
 
@@ -53,7 +63,7 @@ namespace Ferreteria_Salomon
             if(txtUsuario.Text == "")
             {
                 txtUsuario.Text = "Usuario";
-                txtUsuario.ForeColor = Color.LightGray;
+                txtUsuario.ForeColor = Color.Black;
             }
         }
 
@@ -62,7 +72,7 @@ namespace Ferreteria_Salomon
             if (txtContraseña.Text == "Contraseña")
             {
                 txtContraseña.Text = String.Empty;
-                txtContraseña.ForeColor = Color.LightGray;
+                txtContraseña.ForeColor = Color.Black;
                 txtContraseña.UseSystemPasswordChar = true;
             }
         }
@@ -72,7 +82,7 @@ namespace Ferreteria_Salomon
             if (txtContraseña.Text == "")
             {
                 txtContraseña.Text = "Contraseña";
-                txtContraseña.ForeColor = Color.LightGray;
+                txtContraseña.ForeColor = Color.Black;
                 txtContraseña.UseSystemPasswordChar = false;
             }
         }
@@ -109,8 +119,6 @@ namespace Ferreteria_Salomon
                
                 circularpb1.Value = e.ProgressPercentage;
             }
-
-
         }
 
         private void bg_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -123,6 +131,11 @@ namespace Ferreteria_Salomon
             circularpb1.Visible = false;
             label2.Visible = true;
 
+            this.Hide();
+
+            //Abrir Menu
+            NMenu NM = new NMenu();
+            NM.Show();
         }
 
 
@@ -148,9 +161,6 @@ namespace Ferreteria_Salomon
                 
                 circularpb1.Visible = true;
 
-               
-                   
-               
             }
             else
             {
@@ -169,10 +179,23 @@ namespace Ferreteria_Salomon
                   
 
                 }
-
-
             }
 
+         
+
+        }
+
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void Login_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

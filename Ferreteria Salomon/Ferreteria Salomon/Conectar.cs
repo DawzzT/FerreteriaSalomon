@@ -18,7 +18,7 @@ namespace Ferreteria_Salomon
             try
             {
 
-                connect = new SqlConnection("Server=DESKTOP-9UHN9KS;Database=FerreteriaSalomon;UID=" + user + ";PWD=" + pass);
+                connect = new SqlConnection("Server=DAVID;Database=FerreteriaSalomon;UID=" + user + ";PWD=" + pass);
                 connect.Open();
             }
             catch (Exception)
