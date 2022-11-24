@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ferreteria Salomon", "Ferreteria Salomon\Ferreteria Salomon.csproj", "{629A7DDB-14C1-4A3A-94D8-8DD6A8249E96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{4EFAE9AE-3A05-4C0C-B32C-CDAEC4D29D99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{629A7DDB-14C1-4A3A-94D8-8DD6A8249E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{629A7DDB-14C1-4A3A-94D8-8DD6A8249E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{629A7DDB-14C1-4A3A-94D8-8DD6A8249E96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EFAE9AE-3A05-4C0C-B32C-CDAEC4D29D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EFAE9AE-3A05-4C0C-B32C-CDAEC4D29D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EFAE9AE-3A05-4C0C-B32C-CDAEC4D29D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EFAE9AE-3A05-4C0C-B32C-CDAEC4D29D99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

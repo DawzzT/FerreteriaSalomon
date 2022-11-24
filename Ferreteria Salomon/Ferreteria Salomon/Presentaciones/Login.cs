@@ -13,7 +13,7 @@ namespace Ferreteria_Salomon
     {
         int cont = 3;
 
-        Conectar con;
+        Datos.Conectar con;
         BackgroundWorker bg = new BackgroundWorker();
         public Login()
         {
@@ -149,7 +149,7 @@ namespace Ferreteria_Salomon
                 return;
             }
 
-            con = new Conectar(txtUsuario.Text, txtContraseña.Text);
+            con = new Datos.Conectar(txtUsuario.Text, txtContraseña.Text);
             if (this.con.connect.State == ConnectionState.Open)
             {
 

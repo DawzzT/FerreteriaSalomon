@@ -9,6 +9,7 @@
       "Ferreteria Salomon/1.0.0": {
         "dependencies": {
           "AltoControls": "1.0.1",
+          "Datos": "1.0.0",
           "System.Data.SqlClient": "4.8.4"
         },
         "runtime": {
@@ -97,7 +98,15 @@
           "System.Security.Principal.Windows": "4.7.0"
         }
       },
-      "System.Security.Principal.Windows/4.7.0": {}
+      "System.Security.Principal.Windows/4.7.0": {},
+      "Datos/1.0.0": {
+        "dependencies": {
+          "System.Data.SqlClient": "4.8.4"
+        },
+        "runtime": {
+          "Datos.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -175,6 +184,11 @@
       "sha512": "sha512-ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ==",
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
+    },
+    "Datos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
