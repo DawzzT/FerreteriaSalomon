@@ -10,3 +10,6 @@ C:\Users\Dawzter\Desktop\a\Ferreteria Salomon\Datos\obj\Debug\net6.0\Datos.dll
 C:\Users\Dawzter\Desktop\a\Ferreteria Salomon\Datos\obj\Debug\net6.0\refint\Datos.dll
 C:\Users\Dawzter\Desktop\a\Ferreteria Salomon\Datos\obj\Debug\net6.0\Datos.pdb
 C:\Users\Dawzter\Desktop\a\Ferreteria Salomon\Datos\obj\Debug\net6.0\ref\Datos.dll
+C:\Users\Dawzter\Desktop\a\Ferreteria Salomon\Datos\bin\Debug\net6.0\Entidades.dll
+C:\Users\Dawzter\Desktop\a\Ferreteria Salomon\Datos\bin\Debug\net6.0\Entidades.pdb
+C:\Users\Dawzter\Desktop\a\Ferreteria Salomon\Datos\obj\Debug\net6.0\Datos.csproj.CopyComplete

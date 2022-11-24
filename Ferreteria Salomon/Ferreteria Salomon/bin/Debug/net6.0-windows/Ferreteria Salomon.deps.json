@@ -10,6 +10,7 @@
         "dependencies": {
           "AltoControls": "1.0.1",
           "Datos": "1.0.0",
+          "Negocio": "1.0.0",
           "System.Data.SqlClient": "4.8.4"
         },
         "runtime": {
@@ -101,10 +102,24 @@
       "System.Security.Principal.Windows/4.7.0": {},
       "Datos/1.0.0": {
         "dependencies": {
+          "Entidades": "1.0.0",
           "System.Data.SqlClient": "4.8.4"
         },
         "runtime": {
           "Datos.dll": {}
+        }
+      },
+      "Entidades/1.0.0": {
+        "runtime": {
+          "Entidades.dll": {}
+        }
+      },
+      "Negocio/1.0.0": {
+        "dependencies": {
+          "Datos": "1.0.0"
+        },
+        "runtime": {
+          "Negocio.dll": {}
         }
       }
     }
@@ -186,6 +201,16 @@
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
     "Datos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Entidades/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Negocio/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

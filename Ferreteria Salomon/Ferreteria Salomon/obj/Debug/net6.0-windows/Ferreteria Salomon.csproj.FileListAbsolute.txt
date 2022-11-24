@@ -205,3 +205,7 @@ C:\Users\Dawzter\Desktop\a\Ferreteria Salomon\Ferreteria Salomon\obj\Debug\net6.
 C:\Users\Dawzter\Desktop\a\Ferreteria Salomon\Ferreteria Salomon\obj\Debug\net6.0-windows\ref\Ferreteria Salomon.dll
 C:\Users\Dawzter\Desktop\a\Ferreteria Salomon\Ferreteria Salomon\bin\Debug\net6.0-windows\Datos.dll
 C:\Users\Dawzter\Desktop\a\Ferreteria Salomon\Ferreteria Salomon\bin\Debug\net6.0-windows\Datos.pdb
+C:\Users\Dawzter\Desktop\a\Ferreteria Salomon\Ferreteria Salomon\bin\Debug\net6.0-windows\Negocio.dll
+C:\Users\Dawzter\Desktop\a\Ferreteria Salomon\Ferreteria Salomon\bin\Debug\net6.0-windows\Negocio.pdb
+C:\Users\Dawzter\Desktop\a\Ferreteria Salomon\Ferreteria Salomon\bin\Debug\net6.0-windows\Entidades.dll
+C:\Users\Dawzter\Desktop\a\Ferreteria Salomon\Ferreteria Salomon\bin\Debug\net6.0-windows\Entidades.pdb

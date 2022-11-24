@@ -5,7 +5,11 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ferreteria Salomon", "Ferreteria Salomon\Ferreteria Salomon.csproj", "{629A7DDB-14C1-4A3A-94D8-8DD6A8249E96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{4EFAE9AE-3A05-4C0C-B32C-CDAEC4D29D99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Datos", "Datos\Datos.csproj", "{4EFAE9AE-3A05-4C0C-B32C-CDAEC4D29D99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{EC5881D2-4113-4BD3-BDE9-883AE57C9AEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{B64CE99F-6A25-4B62-8CD8-DAF7459C9AF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{4EFAE9AE-3A05-4C0C-B32C-CDAEC4D29D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EFAE9AE-3A05-4C0C-B32C-CDAEC4D29D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EFAE9AE-3A05-4C0C-B32C-CDAEC4D29D99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC5881D2-4113-4BD3-BDE9-883AE57C9AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC5881D2-4113-4BD3-BDE9-883AE57C9AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC5881D2-4113-4BD3-BDE9-883AE57C9AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC5881D2-4113-4BD3-BDE9-883AE57C9AEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B64CE99F-6A25-4B62-8CD8-DAF7459C9AF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B64CE99F-6A25-4B62-8CD8-DAF7459C9AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B64CE99F-6A25-4B62-8CD8-DAF7459C9AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B64CE99F-6A25-4B62-8CD8-DAF7459C9AF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

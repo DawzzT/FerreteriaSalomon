@@ -146,6 +146,16 @@
             "rid": "win"
           }
         }
+      },
+      "Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entidades.dll": {}
+        }
       }
     }
   },
@@ -462,10 +472,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Entidades/1.0.0": {
+      "type": "project",
+      "path": "../Entidades/Entidades.csproj",
+      "msbuildProject": "../Entidades/Entidades.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Entidades >= 1.0.0",
       "System.Data.SqlClient >= 4.8.4"
     ]
   },
@@ -501,7 +517,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Dawzter\\Desktop\\a\\Ferreteria Salomon\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\Dawzter\\Desktop\\a\\Ferreteria Salomon\\Entidades\\Entidades.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

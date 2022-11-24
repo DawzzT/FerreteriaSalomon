@@ -11,6 +11,8 @@ namespace Ferreteria_Salomon
 {
     public partial class Login : Form
     {
+        public string user { get; set; }
+        public string pass { get; set; }
         int cont = 3;
 
         Datos.Conectar con;
@@ -134,7 +136,7 @@ namespace Ferreteria_Salomon
             this.Hide();
 
             //Abrir Menu
-            NMenu NM = new NMenu();
+            NMenu NM = new NMenu(user,pass);
             NM.Show();
         }
 
@@ -158,9 +160,10 @@ namespace Ferreteria_Salomon
                 bg.DoWork += bg_DoWork;
                 bg.RunWorkerCompleted += bg_RunWorkerCompleted;
                 bg.RunWorkerAsync();
-                
+                user = txtUsuario.Text;
+                pass = txtContraseña.Text;
                 circularpb1.Visible = true;
-
+                this.con.connect.Close();
             }
             else
             {

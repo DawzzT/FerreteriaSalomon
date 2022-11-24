@@ -160,6 +160,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Entidades": "1.0.0",
           "System.Data.SqlClient": "4.8.4"
         },
         "compile": {
@@ -167,6 +168,29 @@
         },
         "runtime": {
           "bin/placeholder/Datos.dll": {}
+        }
+      },
+      "Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entidades.dll": {}
+        }
+      },
+      "Negocio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Datos": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Negocio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Negocio.dll": {}
         }
       }
     }
@@ -501,12 +525,23 @@
       "type": "project",
       "path": "../Datos/Datos.csproj",
       "msbuildProject": "../Datos/Datos.csproj"
+    },
+    "Entidades/1.0.0": {
+      "type": "project",
+      "path": "../Entidades/Entidades.csproj",
+      "msbuildProject": "../Entidades/Entidades.csproj"
+    },
+    "Negocio/1.0.0": {
+      "type": "project",
+      "path": "../Negocio/Negocio.csproj",
+      "msbuildProject": "../Negocio/Negocio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "AltoControls >= 1.0.1",
       "Datos >= 1.0.0",
+      "Negocio >= 1.0.0",
       "System.Data.SqlClient >= 4.8.4"
     ]
   },
@@ -545,6 +580,9 @@
           "projectReferences": {
             "C:\\Users\\Dawzter\\Desktop\\a\\Ferreteria Salomon\\Datos\\Datos.csproj": {
               "projectPath": "C:\\Users\\Dawzter\\Desktop\\a\\Ferreteria Salomon\\Datos\\Datos.csproj"
+            },
+            "C:\\Users\\Dawzter\\Desktop\\a\\Ferreteria Salomon\\Negocio\\Negocio.csproj": {
+              "projectPath": "C:\\Users\\Dawzter\\Desktop\\a\\Ferreteria Salomon\\Negocio\\Negocio.csproj"
             }
           }
         }

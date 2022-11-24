@@ -62,9 +62,11 @@
             this.pnlNMenuVertical.Controls.Add(this.pictureBox1);
             this.pnlNMenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlNMenuVertical.Location = new System.Drawing.Point(0, 0);
+            this.pnlNMenuVertical.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlNMenuVertical.Name = "pnlNMenuVertical";
-            this.pnlNMenuVertical.Size = new System.Drawing.Size(206, 880);
+            this.pnlNMenuVertical.Size = new System.Drawing.Size(180, 660);
             this.pnlNMenuVertical.TabIndex = 0;
+            this.pnlNMenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlNMenuVertical_Paint);
             this.pnlNMenuVertical.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlNMenuVertical_MouseDown);
             // 
             // btnReportes
@@ -77,9 +79,10 @@
             this.btnReportes.ForeColor = System.Drawing.Color.Transparent;
             this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(0, 532);
+            this.btnReportes.Location = new System.Drawing.Point(0, 399);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(206, 40);
+            this.btnReportes.Size = new System.Drawing.Size(180, 30);
             this.btnReportes.TabIndex = 7;
             this.btnReportes.Text = "    Reportes";
             this.btnReportes.UseVisualStyleBackColor = true;
@@ -94,9 +97,10 @@
             this.btnColaboradores.ForeColor = System.Drawing.Color.Transparent;
             this.btnColaboradores.Image = ((System.Drawing.Image)(resources.GetObject("btnColaboradores.Image")));
             this.btnColaboradores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnColaboradores.Location = new System.Drawing.Point(3, 447);
+            this.btnColaboradores.Location = new System.Drawing.Point(3, 335);
+            this.btnColaboradores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnColaboradores.Name = "btnColaboradores";
-            this.btnColaboradores.Size = new System.Drawing.Size(206, 40);
+            this.btnColaboradores.Size = new System.Drawing.Size(180, 30);
             this.btnColaboradores.TabIndex = 6;
             this.btnColaboradores.Text = "          Colaboradores";
             this.btnColaboradores.UseVisualStyleBackColor = true;
@@ -112,9 +116,10 @@
             this.btnCompras.ForeColor = System.Drawing.Color.Transparent;
             this.btnCompras.Image = ((System.Drawing.Image)(resources.GetObject("btnCompras.Image")));
             this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompras.Location = new System.Drawing.Point(0, 359);
+            this.btnCompras.Location = new System.Drawing.Point(0, 269);
+            this.btnCompras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(206, 40);
+            this.btnCompras.Size = new System.Drawing.Size(180, 30);
             this.btnCompras.TabIndex = 5;
             this.btnCompras.Text = "    Compras";
             this.btnCompras.UseVisualStyleBackColor = true;
@@ -130,9 +135,10 @@
             this.btnVentas.ForeColor = System.Drawing.Color.Transparent;
             this.btnVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnVentas.Image")));
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentas.Location = new System.Drawing.Point(0, 272);
+            this.btnVentas.Location = new System.Drawing.Point(0, 204);
+            this.btnVentas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(206, 40);
+            this.btnVentas.Size = new System.Drawing.Size(180, 30);
             this.btnVentas.TabIndex = 4;
             this.btnVentas.Text = "    Ventas";
             this.btnVentas.UseVisualStyleBackColor = true;
@@ -148,9 +154,10 @@
             this.btnClientes.ForeColor = System.Drawing.Color.Transparent;
             this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(0, 195);
+            this.btnClientes.Location = new System.Drawing.Point(0, 146);
+            this.btnClientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(206, 40);
+            this.btnClientes.Size = new System.Drawing.Size(180, 30);
             this.btnClientes.TabIndex = 3;
             this.btnClientes.Text = "    Clientes";
             this.btnClientes.UseVisualStyleBackColor = true;
@@ -167,9 +174,10 @@
             this.btnProductos.ForeColor = System.Drawing.Color.Transparent;
             this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.Location = new System.Drawing.Point(0, 112);
+            this.btnProductos.Location = new System.Drawing.Point(0, 84);
+            this.btnProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(206, 40);
+            this.btnProductos.Size = new System.Drawing.Size(180, 30);
             this.btnProductos.TabIndex = 2;
             this.btnProductos.Text = "    Productos";
             this.btnProductos.UseVisualStyleBackColor = true;
@@ -178,9 +186,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 76);
+            this.pictureBox1.Size = new System.Drawing.Size(53, 57);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -192,9 +201,10 @@
             this.pnlNBarraTitulo.Controls.Add(this.pictNCerrarMenu);
             this.pnlNBarraTitulo.Controls.Add(this.pictMenu);
             this.pnlNBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlNBarraTitulo.Location = new System.Drawing.Point(206, 0);
+            this.pnlNBarraTitulo.Location = new System.Drawing.Point(180, 0);
+            this.pnlNBarraTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlNBarraTitulo.Name = "pnlNBarraTitulo";
-            this.pnlNBarraTitulo.Size = new System.Drawing.Size(1188, 51);
+            this.pnlNBarraTitulo.Size = new System.Drawing.Size(1040, 38);
             this.pnlNBarraTitulo.TabIndex = 1;
             this.pnlNBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlNBarraTitulo_MouseDown);
             // 
@@ -203,9 +213,10 @@
             this.pictNMinimizarMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictNMinimizarMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictNMinimizarMenu.Image = ((System.Drawing.Image)(resources.GetObject("pictNMinimizarMenu.Image")));
-            this.pictNMinimizarMenu.Location = new System.Drawing.Point(1086, 9);
+            this.pictNMinimizarMenu.Location = new System.Drawing.Point(950, 7);
+            this.pictNMinimizarMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictNMinimizarMenu.Name = "pictNMinimizarMenu";
-            this.pictNMinimizarMenu.Size = new System.Drawing.Size(43, 35);
+            this.pictNMinimizarMenu.Size = new System.Drawing.Size(38, 26);
             this.pictNMinimizarMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictNMinimizarMenu.TabIndex = 3;
             this.pictNMinimizarMenu.TabStop = false;
@@ -216,9 +227,10 @@
             this.pictNCerrarMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictNCerrarMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictNCerrarMenu.Image = ((System.Drawing.Image)(resources.GetObject("pictNCerrarMenu.Image")));
-            this.pictNCerrarMenu.Location = new System.Drawing.Point(1136, 9);
+            this.pictNCerrarMenu.Location = new System.Drawing.Point(994, 7);
+            this.pictNCerrarMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictNCerrarMenu.Name = "pictNCerrarMenu";
-            this.pictNCerrarMenu.Size = new System.Drawing.Size(40, 35);
+            this.pictNCerrarMenu.Size = new System.Drawing.Size(35, 26);
             this.pictNCerrarMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictNCerrarMenu.TabIndex = 2;
             this.pictNCerrarMenu.TabStop = false;
@@ -228,9 +240,10 @@
             // 
             this.pictMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictMenu.Image = ((System.Drawing.Image)(resources.GetObject("pictMenu.Image")));
-            this.pictMenu.Location = new System.Drawing.Point(6, 9);
+            this.pictMenu.Location = new System.Drawing.Point(5, 7);
+            this.pictMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictMenu.Name = "pictMenu";
-            this.pictMenu.Size = new System.Drawing.Size(35, 35);
+            this.pictMenu.Size = new System.Drawing.Size(31, 26);
             this.pictMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictMenu.TabIndex = 0;
             this.pictMenu.TabStop = false;
@@ -240,22 +253,22 @@
             // 
             this.pnlNContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(156)))), ((int)(((byte)(210)))));
             this.pnlNContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlNContenedor.Location = new System.Drawing.Point(206, 51);
+            this.pnlNContenedor.Location = new System.Drawing.Point(180, 38);
+            this.pnlNContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlNContenedor.Name = "pnlNContenedor";
-            this.pnlNContenedor.Size = new System.Drawing.Size(1188, 829);
+            this.pnlNContenedor.Size = new System.Drawing.Size(1040, 622);
             this.pnlNContenedor.TabIndex = 2;
             this.pnlNContenedor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlNContenedor_MouseDown);
             // 
             // NMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1394, 880);
+            this.ClientSize = new System.Drawing.Size(1220, 660);
             this.Controls.Add(this.pnlNContenedor);
             this.Controls.Add(this.pnlNBarraTitulo);
             this.Controls.Add(this.pnlNMenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "NMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NMenu";

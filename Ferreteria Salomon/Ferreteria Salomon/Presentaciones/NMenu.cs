@@ -14,8 +14,11 @@ namespace Ferreteria_Salomon.Presentaciones
 {
     public partial class NMenu : Form
     {
-        public NMenu()
+        string user, pass;
+        public NMenu(string user, string pass)
         {
+            this.user = user;
+            this.pass = pass;   
             InitializeComponent();
         }
 
@@ -97,7 +100,7 @@ namespace Ferreteria_Salomon.Presentaciones
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            AbrirClientes(new Clientes());
+            AbrirClientes(new Clientes(user,pass));
         }
 
         private void AbrirVentas(object Vents)
@@ -151,6 +154,11 @@ namespace Ferreteria_Salomon.Presentaciones
         private void btnColaboradores_Click(object sender, EventArgs e)
         {
             AbrirColaboradores(new Colaboradores());
+        }
+
+        private void pnlNMenuVertical_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
